@@ -1,0 +1,89 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="username">User Name</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="username" name="username" ngModel required #username="ngModel">
+                <span class="small" *ngIf="!username.valid && username.touched">Please enter valid user name</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="email">Email</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="email" name="email" email ngModel required #email="ngModel">
+                <span class="small" *ngIf="!email.valid && email.touched">Please enter valid email</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="secret question">Secret Question</label>
+            </div>
+            <div class="col">
+                <select name="secret" id="secret" class="form-control" ngModel required>
+                    <option value="pet">Your First Pet</option>
+                    <option value="car">Your First Car</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="gender">Gender</label>
+            </div>
+            <div class="col" *ngFor="let gender of genders">
+                <label>
+                    <input type="radio" name="gender" [value]="gender" ngModel required>
+                    {{gender}}
+                </label>
+
+            </div>
+        </div>
+    </div>
+    
+<button class="btn btn-primary m-2" [disabled]="!f.valid">Submit</button>
+</form>
+<div class="form-control" *ngIf="submitted">
+<div class="row">
+    <div class="col">
+        <label>User Name</label>
+    </div>
+    <div class="col">
+        {{user.username}}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label>Email</label>
+    </div>
+    <div class="col">
+        {{user.email}}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label>Secret Question</label>
+    </div>
+    <div class="col">
+        {{user.secret}}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label>Gender</label>
+    </div>
+    <div class="col">
+        {{user.gender}}
+    </div>
+</div>
+</div>
+</div>

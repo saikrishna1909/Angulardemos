@@ -1,0 +1,57 @@
+<html>
+
+<body>
+    <h1>Welcome to angular fsd</h1>
+</body>
+
+</html>
+<!-- <app-products></app-products>
+<app-products></app-products>
+<app-products></app-products>-->
+<!-- <warning-alert></warning-alert> -->
+<!--success-alert></success-alert> -->
+<!-- <app-products></app-products> -->
+<!-- <app-accounts></app-accounts> -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="nav-item" routerLinkActive="active" routerLinkActiveOption="{exact:true}">
+                    <a class="nav-link" routerLink="/">Home</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                        <a class="nav-link" routerLink="server">Server</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="products">Products</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="successalert">Success Alert</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="warningalert">Warning Alert</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="accounts">Accounts</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="observable">Observable</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="tforms">TForms</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="pipes">Pipes Demo</a>
+                </li>
+                <li role=" presentation" class="nav-item" routerLinkActive="active" >
+                            <a class="nav-link" routerLink="blog">Blogs</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

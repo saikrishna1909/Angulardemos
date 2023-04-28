@@ -1,0 +1,7 @@
+<div class="row m-5">
+    <div class="col">
+        <app-newaccount></app-newaccount>
+        <app-account *ngFor="let account of accounts; let i =index" [account]="account" [Id]="i"></app-account>
+    </div>
+   
+</div>
